@@ -16,7 +16,7 @@ This application was written as a code review of Modern JS Apps for Week Two of 
 * Navigate to the top of this project directory in your command line.
 * Run `npm install` on the command line, in order to install the json packages listed in package.json.
 * Run `bower install` on the command line, in order to install the bower packages (including jQuery, bootstrap CSS and JS, and moment.js) listed in bower.json.
-* To start this application: First, run `gulp build --production`. Then, run `gulp serve`. The home page should open automatically in your browser.
+* To start this application: First, run `gulp build`. Then, run `gulp serve`. The home page should open automatically in your browser.
 
 ## Known Bugs
 

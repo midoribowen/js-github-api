@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var jshint = require('gulp-jshint');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
@@ -22,6 +23,14 @@ var lib = require('bower-files')({
 
 var buildProduction = utilities.env.production;
 
+gulp.task('jshint', function() {
+  return gulp.src(['js/*.js', 'spec/*.js', '*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+gulp.task('bower', ['jsBower', 'cssBower']);
+
 gulp.task('jsBower', function() {
   return gulp.src(lib.ext('js').files)
     .pipe(concat('vendor.min.js'))
@@ -29,9 +38,7 @@ gulp.task('jsBower', function() {
     .pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('bower', ['jsBower', 'cssBower']);
-
-gulp.task("cssBower", function() {
+gulp.task('cssBower', function() {
   return gulp.src(lib.ext("css").files)
     .pipe(concat("vendor.css"))
     .pipe(gulp.dest("./build/css"));
@@ -90,6 +97,7 @@ gulp.task("serve", function() {
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch("scss/*.scss", ['cssBuild']);
+  gulp.watch('index.html', ['bowerBuild']);
 });
 
 gulp.task('jsBuild', ['jsBrowserify'], function() {

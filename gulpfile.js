@@ -49,7 +49,7 @@ gulp.task('cssBuild', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
 

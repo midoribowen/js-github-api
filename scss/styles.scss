@@ -18,10 +18,17 @@ body {
   border: 3px solid $lavender-blue;
   padding: 40px 80px;
   min-height: 80vh;
+  input {
+    color: black;
+  }
   .btn {
     font-weight: bold;
     text-align: center;
     background-color: $lavender-blue;
     color: $dark-blue-gray;
   }
+}
+
+#show-user {
+  display: none;
 }

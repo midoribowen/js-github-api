@@ -1,0 +1,27 @@
+$deep-purple: #14141f;
+$dark-blue-gray: #666699;
+$light-blue-gray: #9999cc;
+$lavender-blue: #ccccff;
+
+body {
+  background-color: $deep-purple;
+}
+
+.container {
+  background-color: $dark-blue-gray;
+  border: 3px solid $light-blue-gray;
+  color: white;
+  min-height: 100vh;
+}
+.box {
+  background-color: $light-blue-gray;
+  border: 3px solid $lavender-blue;
+  padding: 40px 80px;
+  min-height: 80vh;
+  .btn {
+    font-weight: bold;
+    text-align: center;
+    background-color: $lavender-blue;
+    color: $dark-blue-gray;
+  }
+}

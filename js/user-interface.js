@@ -11,9 +11,13 @@ $(function() {
 
     $.get(user.userData(), function(data) {
       $(".show-user").show();
-      $(".show-user").append("<h2 id='user'>Username: " + data.login + "</h2>" +
-                             "<h3 id='followers'>Followers: " + data.followers + "</h3>" +
-                             "<h3 id='number-repos'># of Repositories: " + data.public_repos + "</h3>");
+      $(".show-user").append("<img src='" + data.avatar_url + "' alt='user's avatar' height='200' width='200'>");
+      if (data.name) {
+        $(".show-user").append("<h2 id='full-name'>" + data.name + "</h2>");
+      }
+      $(".show-user").append("<h3 id='user'>Username: " + data.login + "</h3><hr>" +
+                             "<h4 id='followers'>" + data.followers + "<h6> Followers</h6></h4>" +
+                             "<h4 id='number-repos'>" + data.public_repos + "<h6> Public Repositories</h6></h4>");
     });
     // $.get(user.userReposData(), function(data) {
     //   if (data !== 404) {

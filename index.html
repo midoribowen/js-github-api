@@ -12,21 +12,17 @@
       <h1>What Did { User } Do Today?</h1>
       <p><em>Look at any GitHub user's repositories</em></p>
       <div class="box">
-        <form id="username-form">
+        <form id="username-form" role="search">
           <label for="username">Enter a GitHub username:</label>
-          <input id="username" type="text">
-          <button type="submit" class="btn" id="submit-username">Show Repos!</button>
+          <input id="username" type="text" placeholder="Username">
+          <button type="submit" class="btn">Show Repos!</button>
         </form>
-        <div id="show-user">
-          <h2 id="user"></h2>
-          <h3 id="followers"></h3>
-          <h3 id="public-repos"></h3>
-          <h3>Public Repositories:</h3>
-          <div id="#show-repos">
-            <ul>
-              
-            </ul>
-          </div>
+        <div class="show-user">
+
+        </div>
+        <hr>
+        <div class="public-repos">
+
         </div>
       </div>
     </div>

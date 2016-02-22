@@ -9,7 +9,7 @@ User.prototype.userData = function() {
 }
 
 User.prototype.userReposData = function() {
-  return 'https://api.github.com/users/' + this.username + '/repos';
+  return 'https://api.github.com/users/' + this.username + '/repos?sort=updated';
 };
 
 // Exports Class to *-interface.js

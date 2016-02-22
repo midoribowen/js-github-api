@@ -32,6 +32,8 @@ $(function() {
       for(var i = 0; i < data.length; i ++) {
         $(".public-repos").append("<h3 id='repo-name'>" +
                                   "<a href='" + data[i].html_url + "'>" + data[i].name + "</a>" +
+                                  "<h6 align='right'>" + data[i].language + " | &#9733; " + data[i].stargazers_count +
+                                  " | " + data[i].forks_count + " forks<h6>" +
                                   "</h3>" +
                                   "<h5 id='last-updated'>Last Updated: " +
                                   moment(data[i].updated_at).calendar() +

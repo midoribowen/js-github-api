@@ -47,13 +47,5 @@ $(function() {
         }
       }
     });
-    //     $("show-repos").show();
-    //     for(var i = 0; i < data.length; i++) {
-    //       $("div#show-repos ul").append("<li>Repository Name: " + "<a href='" + data[i].html_url + "'>" + data[i].name + "</a>" +
-    //                                     "<ul><li>Created At: " + moment(data[i].created_at).format('LLLL') + "</li>" +
-    //                                     "<li>" + data[i].description + "</li></ul></li>");
-    //     }
-    //   }
-    // });
   });
 });

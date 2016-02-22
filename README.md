@@ -20,7 +20,7 @@ This application was written as a code review of Modern JS Apps for Week Two of 
 
 ## Known Bugs
 
-* The GitHub API only allows 60 requests per hour from a single IP address. Keep this in mind when testing this application, because that cap will be met within testing this application one or two times.
+* The GitHub API only allows 60 requests per hour from a single IP address. Keep this in mind when testing this application; each time you submit a username, the page makes a request to the GitHub API.
 
 ## Technologies Used
 
